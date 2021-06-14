@@ -1,0 +1,323 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    color: #3f4a5d;
+    background-color: rgb(246, 246, 246);
+    font-family: Microsoft JhengHei, Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+header {
+    /* display: flex;
+    align-items: center; */
+    background-color: rgb(246, 246, 246);
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.mobile-menu-btn,
+.mobile-aside {
+    display: none;
+}
+
+.menu {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu.active {
+    color: rgb(255, 255, 123);
+}
+
+.menu>li>a {
+    color: #3f4a5d;
+    font-weight: bolder;
+}
+
+.menu>li>a:hover,
+.menu>li>a.active {
+    color: #5f83c0;
+}
+
+.menu ul {
+    width: 120px;
+    display: none;
+    position: absolute;
+    top: 35px;
+    transform: translateX(-10px);
+    font-size: 1rem;
+    background-color: #556a8d;
+    z-index: 3;
+}
+
+.menu ul li:hover {
+    background-color: white;
+}
+
+.menu ul li a {
+    color: white;
+    display: block;
+    padding: 10px;
+}
+
+.menu ul li a:hover {
+    color: #5f83c0 !important;
+}
+
+.bg-cover {
+    background-position: center center;
+    background-size: cover;
+}
+
+.pageup {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: gray;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.pageup:hover {
+    transform: translateY(5px);
+    cursor: pointer;
+}
+
+
+/* 輪播套件 */
+
+.swiper-container {
+    height: calc(100vh - ( 80px));
+}
+
+
+/*燈箱*/
+
+.lightbox-row {
+    margin-top: 40px;
+}
+
+article {
+    padding: 20px 0;
+}
+
+article h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #6c757D;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media (max-width:768px) {
+    .mobile-menu-btn {
+        display: flex;
+        align-items: center;
+    }
+    .mobile-menu-btn:hover {
+        cursor: pointer;
+    }
+    .menu {
+        display: none;
+    }
+    .mobile-aside {
+        width: 180px;
+        min-height: calc(100vh);
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #556a8d;
+        transform: translateX(-180px);
+        transition: transform 0.5s ease-in-out;
+        z-index: 3;
+    }
+    .open .mobile-aside {
+        transform: translateX(0px);
+        transition: transform 0.5s ease-in-out;
+    }
+    .mobile-menu {
+        margin-top: 20px;
+    }
+    .mobile-menu>li>a {
+        color: white;
+        display: block;
+        padding: 10px 20px;
+    }
+    .mobile-menu>li>a:hover,
+    .mobile-menu>li>a.active {
+        background-color: #94a6c3;
+    }
+    .mobile-menu ul {
+        display: none;
+    }
+    .mobile-menu ul>li>a {
+        display: block;
+        padding: 5px 20px;
+        color: white;
+    }
+    .mobile-menu ul>li>a:hover {
+        background-color: #7485a1;
+    }
+    /* 輪播套件 */
+    .swiper-container {
+        height: 230px;
+    }
+}
